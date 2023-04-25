@@ -17,7 +17,7 @@ containerEle.addEventListener('mousemove',(event)=>{
 
 //animation in
 containerEle.addEventListener('mouseenter',(e)=>{
-    cardEle.style.transition = 'transform 0.1s ease'
+    cardEle.style.transition = 'transform 0.1s ease,background-position 700ms'
     colorsEle.style = `transform:translateZ(30px);
     transition:transform 0.3s ease`
     
@@ -25,12 +25,15 @@ containerEle.addEventListener('mouseenter',(e)=>{
 
 //animation out
 containerEle.addEventListener('mouseleave',(event)=>{
-    cardEle.style.transition = 'transform 0.4s ease'
+    cardEle.style.transition = 'transform 0.4s ease,background-position 700ms'
     cardEle.style.transform = `rotateY(0deg) rotateX(0deg)`
     carImgEle.style.transform = 'translateZ(0px)'
     colorsEle.style.transform = 'translateZ(0px)'
 })
 
+cardEle.addEventListener('mouseover',()=>{
+    cardEle.style.transition = 'background-position 700ms'
+})
 
 function Add3dHoverEffect(element,height=80){
     element.addEventListener('mouseover',()=>{
