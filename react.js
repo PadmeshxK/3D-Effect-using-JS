@@ -3,15 +3,15 @@ const containerEle = document.querySelector('.container')
 
 //Info elements
 const titleEle = document.querySelector('.title')
-const carImgEle = document.querySelector('.img_container img')
+const carImgEle = document.querySelector('.img_container .car_img')
 const sloganEle = document.querySelector('.info .slogan')
 const colorsEle = document.querySelector('.info .colors')
 const nextBtnEle = document.querySelector('.info .next_page_btn')
 
 //3-d animation on hover
 containerEle.addEventListener('mousemove',(event)=>{
-    let xAxis = (window.innerWidth/2 - event.pageX)/35
-    let yAxis = (window.innerHeight/2 - event.pageY)/35
+    let xAxis = (window.innerWidth/2 - event.pageX)/45
+    let yAxis = (window.innerHeight/2 - event.pageY)/45
     cardEle.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`
 })
 

@@ -13,7 +13,11 @@ body{
     justify-content: center;
     align-items: center;
     font-family:'Poppins',sans-serif;
-    
+    background-image: url(images/background_img_4.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    backdrop-filter:blur(3px)
 }
 
 .container{
@@ -54,6 +58,11 @@ body{
 .img_container img{
     width:45rem;
     z-index: 2;
+    transition:opacity 200ms ease;
+}
+
+.img_container .background_shape img{
+    width:15rem;
 }
 
 .img_container .background_shape{
@@ -63,6 +72,11 @@ body{
     position:absolute;
     border-radius: 50%;
     z-index:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left:2rem;
+    border:4px solid white;
 }
 
 .info{
@@ -107,26 +121,33 @@ body{
 }
 
 .info .colors button:nth-child(1){
-    background-color: black;
+    background-color: rgb(24, 24, 24);
 }
 .info .colors button:nth-child(2){
-    background-color: rgb(78, 78, 78);
+    background-color: rgb(225, 225, 225);
 }
 .info .colors button:nth-child(3){
-    background-color: rgb(201, 62, 62);
+    background-color: rgb(228, 28, 36);
 }
 .info .colors button:nth-child(4){
-    background-color: rgb(38, 70, 175);
+    background-color:rgb(24, 142, 212);
 }
 .info .colors button:nth-child(5){
-    background-color: rgb(226, 224, 84);
+    background-color: rgb(218, 184, 51);
 }
 
-.color_hover{
+.info .colors button.color_hover{
     box-shadow:5px 5px 20px rgba(0,0,0,0.3);
     scale:1.2;
+    border-color:white;
 }
 
+.info .colors button.color_selected{
+    box-shadow:5px 5px 20px rgba(0,0,0,0.3);
+    scale:1.1;
+    border-color:rgb(117, 6, 151);
+    border-width:3px;
+}
 
 .info .next_page_btn button{
     padding:1rem 1.5rem;
